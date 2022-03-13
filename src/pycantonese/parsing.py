@@ -179,3 +179,13 @@ def parse_text(
     reader = CHATReader()
     reader._files = collections.deque([f])
     return reader
+
+
+def load_models() -> None:
+    """Load models for parsing and segmentation functions.
+
+    The primary use case of this function is in the context of an app,
+    where we would like to minimize delay in delivering the result upon the first
+    user-triggered function call for analysis.
+    """
+    parse_text("一二三")

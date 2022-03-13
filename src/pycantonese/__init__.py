@@ -15,7 +15,7 @@ from pycantonese.jyutping.yale import jyutping_to_yale, jyutping2yale
 from pycantonese.pos_tagging.tagger import pos_tag
 from pycantonese.stop_words import stop_words
 from pycantonese.word_segmentation import segment
-from pycantonese.parsing import parse_text
+from pycantonese.parsing import parse_text, load_models
 
 
 __version__ = version("pycantonese")
@@ -36,4 +36,5 @@ __all__ = [
     "read_chat",
     "stop_words",
     "segment",
+    "load_models",
 ]

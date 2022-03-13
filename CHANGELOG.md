@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 ## [Unreleased]
 
 ### Added
+- Added the `load_models` function.
+
 ### Changed
 - Restructured the repository to use top-level `src/` and `tests/` directories.
 

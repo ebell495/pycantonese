@@ -42,6 +42,7 @@ Natural Language Processing
     word_segmentation.Segmenter
     pos_tag
     pos_tagging.hkcancor_to_ud
+    load_models
 
 
 :class:`~pycantonese.CHATReader`
