@@ -3,6 +3,7 @@ import concurrent.futures as cf
 import functools
 import multiprocessing as mp
 import re
+import threading
 import uuid
 from string import ascii_uppercase
 
@@ -188,4 +189,5 @@ def load_models() -> None:
     where we would like to minimize delay in delivering the result upon the first
     user-triggered function call for analysis.
     """
-    parse_text("一二三")
+    thread = threading.Thread(target=parse_text, args=("一二三",))
+    thread.start()
