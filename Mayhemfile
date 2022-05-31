@@ -6,4 +6,9 @@ tests:
 
 cmds:
     - cmd: fuzz/fuzz.py
+<<<<<<< HEAD
       libfuzzer: true
+=======
+      libfuzzer: true
+      timeout: 60
+>>>>>>> 88ef9de31c772687c622bc39617d56ea118d6f70
