@@ -3,9 +3,10 @@ import atheris
 import sys
 
 # from logmine_pkg.run import run
-# with atheris.instrument_imports():
-import pycantonese
-pycantonese.parse_text("我們")
+with atheris.instrument_imports():
+    import pycantonese
+
+pycantonese.segment("我們")
 
 
 @atheris.instrument_func
@@ -16,9 +17,9 @@ def TestOneInput(data):
     # option = fdp.ConsumeBytes(1)[0]
     in_str = fdp.ConsumeString(len(data))
 
-    # pycantonese.segment(in_str)
+    pycantonese.segment(in_str)
     # pycantonese.characters_to_jyutping(in_str)
-    pycantonese.parse_text(in_str, parallel=False)
+    # pycantonese.parse_text(in_str, parallel=False)
 
     # if option % 4 == 0:
     #     pycantonese.parse_text(in_str)
@@ -28,7 +29,7 @@ def TestOneInput(data):
     #     
 
 
-atheris.instrument_all()
+# atheris.instrument_all()
 atheris.Setup(sys.argv, TestOneInput)
 # Hacky, but the cli does not like the arguments Mayhem gives it
 sys.argv = [sys.argv[0]]
