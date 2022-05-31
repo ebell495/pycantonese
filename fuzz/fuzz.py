@@ -3,8 +3,9 @@ import atheris
 import sys
 
 # from logmine_pkg.run import run
-with atheris.instrument_imports():
-    import pycantonese
+# with atheris.instrument_imports():
+import pycantonese
+pycantonese.parse_text("我們")
 
 
 @atheris.instrument_func
@@ -27,7 +28,7 @@ def TestOneInput(data):
     #     
 
 
-# atheris.instrument_all()
+atheris.instrument_all()
 atheris.Setup(sys.argv, TestOneInput)
 # Hacky, but the cli does not like the arguments Mayhem gives it
 sys.argv = [sys.argv[0]]
