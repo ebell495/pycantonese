@@ -7,4 +7,3 @@ tests:
 cmds:
     - cmd: fuzz/fuzz.py
       libfuzzer: true
-      timeout: 5
