@@ -9,18 +9,22 @@ with atheris.instrument_imports():
 
 @atheris.instrument_func
 def TestOneInput(data):
-    if len(data) < 1:
-        return
+    # if len(data) < 1:
+    #     return
     fdp = atheris.FuzzedDataProvider(data)
-    option = fdp.ConsumeBytes(1)[0]
+    # option = fdp.ConsumeBytes(1)[0]
     in_str = fdp.ConsumeString(len(data))
 
-    if option % 4 == 0:
-        pycantonese.parse_text(in_str)
-    elif option % 4 == 1:
-        pycantonese.segment(in_str)
-    elif option % 4 == 3:
-        pycantonese.characters_to_jyutping(in_str)
+    # pycantonese.segment(in_str)
+    # pycantonese.characters_to_jyutping(in_str)
+    pycantonese.parse_text(in_str)
+
+    # if option % 4 == 0:
+    #     pycantonese.parse_text(in_str)
+    # elif option % 4 == 1:
+        
+    # elif option % 4 == 3:
+    #     
 
 
 # atheris.instrument_all()
