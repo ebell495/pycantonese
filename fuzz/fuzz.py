@@ -17,7 +17,7 @@ def TestOneInput(data):
 
     # pycantonese.segment(in_str)
     # pycantonese.characters_to_jyutping(in_str)
-    pycantonese.parse_text(in_str)
+    pycantonese.parse_text(in_str, parallel=False)
 
     # if option % 4 == 0:
     #     pycantonese.parse_text(in_str)
