@@ -1,7 +1,7 @@
 project: pycantonese
 target: fuzz
 
-tests: 
+testsuite: 
     - file://./fuzz/corpus/
 
 cmds:
