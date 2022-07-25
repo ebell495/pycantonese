@@ -1,9 +1,9 @@
 project: pycantonese
-target: fuzz
+target: fuzz_segmenter
 
 testsuite: 
     - file://./fuzz/corpus/
 
 cmds:
-    - cmd: fuzz/fuzz.py
+    - cmd: fuzz/fuzz_segmenter.py
       libfuzzer: true
